@@ -6,19 +6,27 @@ import android.util.Log;
 /**
  * Created by user on 3/12/2015.
  */
+
+
 public class BuildingDataInput {
-    public BuildingDataInput(){
+    public BuildingDataInput() {
 
     }
 
-    public void BuildingData(BuildingDatabaseOperation dh, SQLiteDatabase db){
+    public void BuildingData(BuildingDatabaseOperation dh, SQLiteDatabase db) {
 
-        dh.putInfomation(db,1,"buildinga","kl","tw",-24,151);
-        dh.putInfomation(db,2,"buildingb","kl","tw",-23,161);
-        dh.putInfomation(db,3,"buildingc","kl","tw",-22,141);
-        dh.putInfomation(db,4, "buildingd","kl","tw",-24,131);
-        Log.d("Building Data", "Building Data is inputed");
 
+        for (int j = 1; j < 500; j++) {
+            String randomRegion = new randomData().getRandomRegion();
+            String randomDistrict = new randomData().getRandomDistrict();
+            int randomPrice = new randomData().getRandomFlatPrice();
+            double randomLat = new randomData().getRandomLat();
+            double randomLng = new randomData().getRandomLng();
+            dh.putInfomation(db, j, "building" + j, randomRegion, randomDistrict, randomPrice, randomLat, randomLng);
+
+            Log.d("Building Data", "Building Data is inputed");
+        }
     }
+
 
 }
