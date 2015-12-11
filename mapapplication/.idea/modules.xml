@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/libs/MaterialDesignLibrary/MaterialDesignDemo/MaterialDesignDemo.iml" filepath="$PROJECT_DIR$/libs/MaterialDesignLibrary/MaterialDesignDemo/MaterialDesignDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/actionsContentViewLib/actionsContentViewLib.iml" filepath="$PROJECT_DIR$/actionsContentViewLib/actionsContentViewLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/KJFrameForAndroid-master/KJFrame/kjframe/kjframe.iml" filepath="$PROJECT_DIR$/libs/KJFrameForAndroid-master/KJFrame/kjframe/kjframe.iml" />
       <module fileurl="file://$PROJECT_DIR$/mapapplication.iml" filepath="$PROJECT_DIR$/mapapplication.iml" />
     </modules>
   </component>
