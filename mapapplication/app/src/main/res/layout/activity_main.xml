@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <shared.ui.actionscontentview.ActionsContentView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/actionsContentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actions_layout="@layout/buildinglist"
+        app:content_layout="@layout/content"
+        app:swiping_type="full"
+        app:spacing_type="actions_width"
+        app:spacing="150dp"
+        app:fade_type="actions" />
+
+
+</RelativeLayout>

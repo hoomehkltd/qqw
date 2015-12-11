@@ -16,7 +16,7 @@ public class BuildingDataInput {
     public void BuildingData(BuildingDatabaseOperation dh, SQLiteDatabase db) {
 
 
-        for (int j = 1; j < 500; j++) {
+        for (int j = 1; j < 20; j++) {
             String randomRegion = new randomData().getRandomRegion();
             String randomDistrict = new randomData().getRandomDistrict();
             int randomPrice = new randomData().getRandomFlatPrice();

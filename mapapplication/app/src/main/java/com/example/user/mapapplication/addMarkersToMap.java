@@ -55,14 +55,13 @@ public class addMarkersToMap {
         }
         while(cs.moveToNext());
 
-        map.addMarker(new MarkerOptions().position(klLatLng).title(Integer.toString(klCount)));
-        map.addMarker(new MarkerOptions().position(hkLatLng).title(Integer.toString(hkCount)));
-        map.addMarker(new MarkerOptions().position(ntLatLng).title(Integer.toString(ntCount)));
-        map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(22.447088, 114.137932)));
-        map.animateCamera(CameraUpdateFactory.zoomTo(MapsActivity.regionZoomLevel), 2000, null);
+        map.addMarker(new MarkerOptions().position(klLatLng).title("KL").snippet(Integer.toString(klCount)));
+        map.addMarker(new MarkerOptions().position(hkLatLng).title("HK").snippet(Integer.toString(hkCount)));
+        map.addMarker(new MarkerOptions().position(ntLatLng).title("NT").snippet(Integer.toString(ntCount)));
+
     }
 
-    public static void addDistrictMarkersToMap(Cursor cs, GoogleMap map, LatLng latLng){
+    public static void addDistrictMarkersToMap(Cursor cs, GoogleMap map){
         int cwCount = 0;
         int easCount = 0;
         int souCount = 0;
@@ -83,7 +82,6 @@ public class addMarkersToMap {
         int tmCount = 0;
 
         map.clear();
-        latLng = latLng;
         cs.moveToFirst();
         Log.d("District",cs.getString(3));
 
@@ -146,26 +144,25 @@ public class addMarkersToMap {
 
         }
         while(cs.moveToNext());
-        map.addMarker(new MarkerOptions().position(cwLatLng).title(Integer.toString(cwCount)));
-        map.addMarker(new MarkerOptions().position(easLatLng).title(Integer.toString(easCount)));
-        map.addMarker(new MarkerOptions().position(souLatLng).title(Integer.toString(souCount)));
-        map.addMarker(new MarkerOptions().position(wcLatLng).title(Integer.toString(wcCount)));
-        map.addMarker(new MarkerOptions().position(sspLatLng).title(Integer.toString(sspCount)));
-        map.addMarker(new MarkerOptions().position(kcLatLng).title(Integer.toString(kcCount)));
-        map.addMarker(new MarkerOptions().position(ktLatLng).title(Integer.toString(ktCount)));
-        map.addMarker(new MarkerOptions().position(wtsLatLng).title(Integer.toString(wtsCount)));
-        map.addMarker(new MarkerOptions().position(ytmLatLng).title(Integer.toString(ytmCount)));
-        map.addMarker(new MarkerOptions().position(islLatLng).title(Integer.toString(islCount)));
-        map.addMarker(new MarkerOptions().position(ktgLatLng).title(Integer.toString(ktgCount)));
-        map.addMarker(new MarkerOptions().position(norLatLng).title(Integer.toString(norCount)));
-        map.addMarker(new MarkerOptions().position(skLatLng).title(Integer.toString(skCount)));
-        map.addMarker(new MarkerOptions().position(stLatLng).title(Integer.toString(stCount)));
-        map.addMarker(new MarkerOptions().position(tpLatLng).title(Integer.toString(tpCount)));
-        map.addMarker(new MarkerOptions().position(twLatLng).title(Integer.toString(twCount)));
-        map.addMarker(new MarkerOptions().position(ylLatLng).title(Integer.toString(ylCount)));
-        map.addMarker(new MarkerOptions().position(tmLatLng).title(Integer.toString(tmCount)));
+        map.addMarker(new MarkerOptions().position(cwLatLng).title("CW").snippet(Integer.toString(cwCount)));
+        map.addMarker(new MarkerOptions().position(easLatLng).title("EAS").snippet(Integer.toString(easCount)));
+        map.addMarker(new MarkerOptions().position(souLatLng).title("SOU").snippet(Integer.toString(souCount)));
+        map.addMarker(new MarkerOptions().position(wcLatLng).title("WC").snippet(Integer.toString(wcCount)));
+        map.addMarker(new MarkerOptions().position(sspLatLng).title("SSP").snippet(Integer.toString(sspCount)));
+        map.addMarker(new MarkerOptions().position(kcLatLng).title("KC").snippet(Integer.toString(kcCount)));
+        map.addMarker(new MarkerOptions().position(ktLatLng).title("KT").snippet(Integer.toString(ktCount)));
+        map.addMarker(new MarkerOptions().position(wtsLatLng).title("WTS").snippet(Integer.toString(wtsCount)));
+        map.addMarker(new MarkerOptions().position(ytmLatLng).title("YTM").snippet(Integer.toString(ytmCount)));
+        map.addMarker(new MarkerOptions().position(islLatLng).title("ISL").snippet(Integer.toString(islCount)));
+        map.addMarker(new MarkerOptions().position(ktgLatLng).title("KTG").snippet(Integer.toString(ktgCount)));
+        map.addMarker(new MarkerOptions().position(norLatLng).title("NOR").snippet(Integer.toString(norCount)));
+        map.addMarker(new MarkerOptions().position(skLatLng).title("SK").snippet(Integer.toString(skCount)));
+        map.addMarker(new MarkerOptions().position(stLatLng).title("ST").snippet(Integer.toString(stCount)));
+        map.addMarker(new MarkerOptions().position(tpLatLng).title("TP").snippet(Integer.toString(tpCount)));
+        map.addMarker(new MarkerOptions().position(twLatLng).title("TW").snippet(Integer.toString(twCount)));
+        map.addMarker(new MarkerOptions().position(ylLatLng).title("YL").snippet(Integer.toString(ylCount)));
+        map.addMarker(new MarkerOptions().position(tmLatLng).title("TM").snippet(Integer.toString(tmCount)));
 
-        map.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        map.animateCamera(CameraUpdateFactory.zoomTo(12), 2000, null);
+
     }
 }

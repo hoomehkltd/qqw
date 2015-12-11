@@ -1,1 +1,4 @@
-include ':app'
+include ':app', ':MaterialDesign', ':MaterialDesignDemo'
+include ':actionsContentViewLib'
+project(':MaterialDesign').projectDir = new File('libs/MaterialDesignLibrary/MaterialDesign')
+project(':MaterialDesignDemo').projectDir = new File('libs/MaterialDesignLibrary/MaterialDesignDemo')

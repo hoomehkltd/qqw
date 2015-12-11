@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/libs/MaterialDesignLibrary/MaterialDesign/MaterialDesign.iml" filepath="$PROJECT_DIR$/libs/MaterialDesignLibrary/MaterialDesign/MaterialDesign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/MaterialDesignLibrary/MaterialDesignDemo/MaterialDesignDemo.iml" filepath="$PROJECT_DIR$/libs/MaterialDesignLibrary/MaterialDesignDemo/MaterialDesignDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/actionsContentViewLib/actionsContentViewLib.iml" filepath="$PROJECT_DIR$/actionsContentViewLib/actionsContentViewLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mapapplication.iml" filepath="$PROJECT_DIR$/mapapplication.iml" />
     </modules>
