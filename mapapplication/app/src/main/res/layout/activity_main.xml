@@ -10,9 +10,9 @@
         android:layout_height="match_parent"
         app:actions_layout="@layout/buildinglist"
         app:content_layout="@layout/content"
-        app:swiping_type="full"
+        app:swiping_type="edge"
         app:spacing_type="actions_width"
-        app:spacing="150dp"
+        app:spacing="300dp"
         app:fade_type="actions" />
 
 

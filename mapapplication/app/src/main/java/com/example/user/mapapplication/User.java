@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 public class User {
     private int id;
+    private String password;
     private String name;
     private int phoneNo;
     private ArrayList<Appointment> buildingVisitLog;
@@ -16,6 +17,14 @@ public class User {
     private ArrayList<Agent> agentList;
 
     public User() {
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getId() {

@@ -1,6 +1,7 @@
 package com.example.user.mapapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -38,6 +39,7 @@ import com.gc.materialdesign.widgets.Dialog;
 import com.gc.materialdesign.widgets.*;
 import android.view.View.OnClickListener;
 
+import org.kymjs.kjframe.KJDB;
 
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, OnInfoWindowClickListener {
@@ -45,16 +47,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static GoogleMap mMap;
     public BuildingDatabaseOperation dh;
     private SQLiteDatabase db;
+    public Cursor cs;
     private MapNode HKNode;
-    private Cursor cs;
     private Marker mLastSelectedMarker;
     private RadioGroup mOptions;
     public static float regionZoomLevel = 10;
     public static float districtZoomLevel = 11;
     private static ActionsContentView viewActionsContentView;
-    public ArrayList<String> buildingList;
+    public ArrayList<BuildingData> buildingList;
     public ListView viewActionsList;
     public static int zoomLevel =0;
+    private User user;
+    private BuildingData myLastBuildingClick;
+    private KJDB userDb;
+    public String dbpath;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -67,6 +73,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
        //Database Initiation
         dh = new BuildingDatabaseOperation(this, BuildingData.BuildingInfo.DatabaseName, null, 1);
         db = dh.opendb();
+        dbpath = db.getPath();
         cs = BuildingDatabaseOperation.getInformation(db);
         BuildingDataInput Input = new BuildingDataInput();
         Input.BuildingData(dh, db);
@@ -76,39 +83,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_main);
         viewActionsContentView = (ActionsContentView) findViewById(R.id.actionsContentView);
         viewActionsList = (ListView) findViewById(R.id.buildinglist);
+        buildingList = new BuildingDataExtract().getInitialBuildingList(cs);
+        final ArrayAdapter<BuildingData> adapter = new BuildingListAdapter(this,R.layout.item_buildingitem,buildingList);
+        viewActionsList.setAdapter(adapter);
         viewActionsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View v, int position,
                                     long flags) {
-                String BuildingName = viewActionsList.getItemAtPosition(position).toString();
-                Log.d("OnclickBuilding",BuildingName);
-                Dialog dialog = new Dialog(MapsActivity.this, "Title", "Msg");
-                dialog.setOnAcceptButtonClickListener(new OnClickListener() {
+                BuildingData buildingItem = (BuildingData)viewActionsList.getItemAtPosition(position);
+                String buildingNo = buildingItem.getBuildingNo();
 
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(MapsActivity.this, "Click accept button", 1).show();
-                    }
-                });
-                dialog.setOnCancelButtonClickListener(new OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(MapsActivity.this, "Click cancel button", 1).show();
-                    }
-                });
-                dialog.show();
-
-//                showFragment(position);
+                Intent buildingDataBundle = new Intent(MapsActivity.this, BuildingActivity.class);
+                buildingDataBundle.putExtra("BuildingNo", buildingNo);
+                buildingDataBundle.putExtra("dbpath", dbpath);
+                startActivity(buildingDataBundle);
             }
         });
 
-        buildingList = new BuildingListOperation().getInitialBuildingNameList(cs);
-//        String [] initialBuildingNameLists = new String[buildingList.size()];
-//        initialBuildingNameLists = buildingList.toArray(initialBuildingNameLists);
 
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,buildingList);
-        viewActionsList.setAdapter(adapter);
         showMap();
 
 
@@ -218,6 +210,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
+
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public BuildingData getMyLastBuildingClick() {
+        return myLastBuildingClick;
+    }
+
+    public void setMyLastBuildingClick(BuildingData myLastBuildingClick) {
+        this.myLastBuildingClick = myLastBuildingClick;
+    }
+
+    public KJDB getUserDb() {
+        return userDb;
+    }
+
+
 }
 
 //    public void addFlatMarkersToMap(ArrayList<Object> BuildingList){

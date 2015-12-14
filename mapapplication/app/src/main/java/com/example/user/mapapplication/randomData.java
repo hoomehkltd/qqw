@@ -69,4 +69,14 @@ public class randomData {
         Log.d("randomLng",randomLng.toString());
         return randomLng;
     }
+
+    public static int getRandomPhoneNo(){
+        int randomPhoneNo ;
+        int upMost = 99999999;
+        int downMost = 77777777;
+        randomPhoneNo = downMost+(int)Math.round(((upMost - downMost) * Math.random()));
+        Log.d("randomPhoneNo",Integer.toString(randomPhoneNo));
+        return randomPhoneNo;
+
+    }
 }

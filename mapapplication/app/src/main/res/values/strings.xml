@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">map application</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_building">title_activity_building</string>
     keytool -list -v -keystore mystore.keystore
 </resources>
 
