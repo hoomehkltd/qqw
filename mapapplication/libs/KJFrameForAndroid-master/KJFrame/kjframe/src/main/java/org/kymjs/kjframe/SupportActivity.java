@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 
 import org.kymjs.kjframe.ui.AnnotateUtil;
 import org.kymjs.kjframe.ui.I_BroadcastReg;
@@ -159,6 +160,7 @@ public abstract class SupportActivity extends AppCompatActivity implements
      ***************************************************************************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         aty = this;
         KJActivityStack.create().addActivity(this);
         KJLoger.state(this.getClass().getName(), "---------onCreat ");

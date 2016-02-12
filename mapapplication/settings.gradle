@@ -1,5 +1,5 @@
-include ':app', ':MaterialDesign', ':MaterialDesignDemo', ':kjframe'
+include ':app', ':kjframe', ':SlideBottomPanel', ':androidformenhancer', ':DatePicker', ':calendarview'
 include ':actionsContentViewLib'
-project(':MaterialDesign').projectDir = new File('libs/MaterialDesignLibrary/MaterialDesign')
-project(':MaterialDesignDemo').projectDir = new File('libs/MaterialDesignLibrary/MaterialDesignDemo')
 project(':kjframe').projectDir = new File('libs/KJFrameForAndroid-master/KJFrame/kjframe')
+project(':SlideBottomPanel').projectDir = new File('libs/SlideBottomPanel')
+project(':calendarview').projectDir = new File('libs/calendarview/library')

@@ -26,7 +26,7 @@ public abstract class Button extends CustomView {
 	int background;
 	float rippleSpeed = 12f;
 	int rippleSize = 3;
-	Integer rippleColor;
+	Integer mrippleColor;
 	OnClickListener onClickListener;
 	boolean clickAfterRipple = true;
 	int backgroundColor = Color.parseColor("#1E88E5");
@@ -39,8 +39,8 @@ public abstract class Button extends CustomView {
 				"animate", true);
 		setAttributes(attrs);
 		beforeBackground = backgroundColor;
-		if (rippleColor == null)
-			rippleColor = makePressColor();
+		if (mrippleColor == null)
+			mrippleColor = makePressColor();
 	}
 
 	protected void setDefaultProperties() {
@@ -123,7 +123,7 @@ public abstract class Button extends CustomView {
 		canvas.drawARGB(0, 0, 0, 0);
 		Paint paint = new Paint();
 		paint.setAntiAlias(true);
-		paint.setColor(rippleColor);
+		paint.setColor(mrippleColor);
 		canvas.drawCircle(x, y, radius, paint);
 		if (radius > getHeight() / rippleSize)
 			radius += rippleSpeed;
@@ -167,7 +167,7 @@ public abstract class Button extends CustomView {
 			GradientDrawable shape = (GradientDrawable) layer
 					.findDrawableByLayerId(R.id.shape_bacground);
 			shape.setColor(backgroundColor);
-			rippleColor = makePressColor();
+			mrippleColor = makePressColor();
 		} catch (Exception ex) {
 			// Without bacground
 		}

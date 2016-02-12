@@ -46,7 +46,7 @@ public class randomData {
     }
     public int getRandomFlatPrice(){
         int RandomFlatPrice ;
-        int maxFlatPrice = 6000000;
+        int maxFlatPrice = 6000;
         RandomFlatPrice = (int) Math.floor(maxFlatPrice * Math.random());
 
         return RandomFlatPrice;

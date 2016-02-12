@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\DatePicker\\build\\intermediates\\res\\merged\\release\\layout-land\\mdtp_date_picker_dialog.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\DatePicker\\src\\main\\res\\layout-land\\mdtp_date_picker_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\DatePicker\\build\\intermediates\\res\\merged\\release\\layout-land\\mdtp_time_picker_dialog.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\DatePicker\\src\\main\\res\\layout-land\\mdtp_time_picker_dialog.xml"
+    }
+]

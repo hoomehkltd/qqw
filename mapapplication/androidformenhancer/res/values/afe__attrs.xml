@@ -1,0 +1,95 @@
+<!--
+  Copyright 2012 Soichiro Kashima
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources>
+
+    <attr name="afeValidatorDefinitions" format="reference" />
+    <attr name="afeStopPolicy" format="integer">
+        <enum name="continueAll" value="0" />
+        <enum name="stopAllIfAny" value="1" />
+        <enum name="stopAndResumeNext" value="2" />
+    </attr>
+    <attr name="afeStandardValidators" format="reference" />
+    <attr name="afeCustomValidators" format="reference" />
+    <attr name="afeCharacterEncoding" format="string" />
+    <attr name="afeCustomEmailPattern" format="reference" />
+    <attr name="afeValidationErrorIconEnabled" format="reference" />
+    <attr name="afeValidationIconError" format="reference" />
+    <attr name="afeValidationIconOk" format="reference" />
+
+    <declare-styleable name="ValidatorDefinitions">
+        <attr name="afeStopPolicy" />
+        <attr name="afeStandardValidators" />
+        <attr name="afeCustomValidators" />
+        <attr name="afeCharacterEncoding" />
+        <attr name="afeCustomEmailPattern" />
+        <attr name="afeValidationErrorIconEnabled" />
+        <attr name="afeValidationIconError" />
+        <attr name="afeValidationIconOk" />
+    </declare-styleable>
+
+    <attr name="afeValidatorMessages" format="reference" />
+    <attr name="afeErrorDatePattern" format="reference" />
+    <attr name="afeErrorDigits" format="reference" />
+    <attr name="afeErrorEmail" format="reference" />
+    <attr name="afeErrorIntRange" format="reference" />
+    <attr name="afeErrorIntType" format="reference" />
+    <attr name="afeErrorFloatType" format="reference" />
+    <attr name="afeErrorLength" format="reference" />
+    <attr name="afeErrorMaxLength" format="reference" />
+    <attr name="afeErrorMaxNumOfDigits" format="reference" />
+    <attr name="afeErrorMaxValue" format="reference" />
+    <attr name="afeErrorMinValue" format="reference" />
+    <attr name="afeErrorMultibyte" format="reference" />
+    <attr name="afeErrorNumOfDigits" format="reference" />
+    <attr name="afeErrorPastDate" format="reference" />
+    <attr name="afeErrorRegex" format="reference" />
+    <attr name="afeErrorRequired" format="reference" />
+    <attr name="afeErrorRequiredSelection" format="reference" />
+    <attr name="afeErrorRequiredMultipleSelection" format="reference" />
+    <attr name="afeErrorSinglebyte" format="reference" />
+    <attr name="afeErrorHiragana" format="reference" />
+    <attr name="afeErrorKatakana" format="reference" />
+    <attr name="afeErrorAlphabet" format="reference" />
+    <attr name="afeErrorAlphaNum" format="reference" />
+
+    <declare-styleable name="ValidatorMessages">
+        <attr name="afeErrorDatePattern" />
+        <attr name="afeErrorDigits" />
+        <attr name="afeErrorEmail" />
+        <attr name="afeErrorIntRange" />
+        <attr name="afeErrorIntType" />
+        <attr name="afeErrorFloatType" />
+        <attr name="afeErrorLength" />
+        <attr name="afeErrorMaxLength" />
+        <attr name="afeErrorMaxNumOfDigits" />
+        <attr name="afeErrorMaxValue" />
+        <attr name="afeErrorMinValue" />
+        <attr name="afeErrorMultibyte" />
+        <attr name="afeErrorNumOfDigits" />
+        <attr name="afeErrorPastDate" />
+        <attr name="afeErrorRegex" />
+        <attr name="afeErrorRequired" />
+        <attr name="afeErrorRequiredSelection" />
+        <attr name="afeErrorRequiredMultipleSelection" />
+        <attr name="afeErrorSinglebyte" />
+        <attr name="afeErrorHiragana" />
+        <attr name="afeErrorKatakana" />
+        <attr name="afeErrorAlphabet" />
+        <attr name="afeErrorAlphaNum" />
+    </declare-styleable>
+
+</resources>

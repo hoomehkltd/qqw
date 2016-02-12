@@ -10,11 +10,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/DatePicker" />
             <option value="$PROJECT_DIR$/actionsContentViewLib" />
+            <option value="$PROJECT_DIR$/androidformenhancer" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libs/KJFrameForAndroid-master/KJFrame/kjframe" />
-            <option value="$PROJECT_DIR$/libs/MaterialDesignLibrary/MaterialDesign" />
-            <option value="$PROJECT_DIR$/libs/MaterialDesignLibrary/MaterialDesignDemo" />
+            <option value="$PROJECT_DIR$/libs/SlideBottomPanel" />
+            <option value="$PROJECT_DIR$/libs/calendarview/library" />
           </set>
         </option>
       </GradleProjectSettings>

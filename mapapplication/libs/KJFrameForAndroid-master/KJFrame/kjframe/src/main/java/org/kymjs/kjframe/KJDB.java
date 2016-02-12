@@ -78,6 +78,9 @@ public class KJDB {
         this.config = config;
     }
 
+    public DaoConfig getConfig(KJDB kjdb){
+        return this.config;
+    }
     private synchronized static KJDB getInstance(DaoConfig daoConfig) {
         KJDB dao = daoMap.get(daoConfig.getDbName());
         if (dao == null) {
@@ -843,5 +846,7 @@ public class KJDB {
          */
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion);
     }
+
+
 
 }

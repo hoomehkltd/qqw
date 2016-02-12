@@ -1,0 +1,64 @@
+<!--
+  Copyright 2012 Soichiro Kashima
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources>
+
+    <string name="afe__msg_validation_required">%1$s is required</string>
+    <string name="afe__msg_validation_required_selection">%1$s must be selected</string>
+    <string name="afe__msg_validation_required_multiple_selection">%1$s must be selected at least %2$d</string>
+    <string name="afe__msg_validation_int_type">%1$s must be an integer</string>
+    <string name="afe__msg_validation_float_type">%1$s must be a floating point number</string>
+    <string name="afe__msg_validation_digits">%1$s must be digits</string>
+    <string name="afe__msg_validation_min_value">%1$s must be more than or equal to %2$d</string>
+    <string name="afe__msg_validation_max_value">%1$s must be less than or equal to %2$d</string>
+    <string name="afe__msg_validation_int_range">%1$s is not in the range %2$d through %3$d</string>
+    <string name="afe__msg_validation_multibyte">%1$s must be multibyte characters</string>
+    <string name="afe__msg_validation_singlebyte">%1$s must be singlebyte characters</string>
+    <string name="afe__msg_validation_length">%1$s must be %2$d characters</string>
+    <string name="afe__msg_validation_max_length">%1$s must be less than %2$d characters</string>
+    <string name="afe__msg_validation_num_of_digits">%1$s must be %2$d digits</string>
+    <string name="afe__msg_validation_max_num_of_digits">%1$s must be less than %2$d digits</string>
+    <string name="afe__msg_validation_regex">%1$s is invalid</string>
+    <string name="afe__msg_validation_email">%1$s is invalid e-mail address</string>
+    <string name="afe__msg_validation_date">%1$s is invalid date</string>
+    <string name="afe__msg_validation_past_date">%1$s must be past date</string>
+    <string name="afe__msg_validation_hiragana">%1$s must be hiragana characters</string>
+    <string name="afe__msg_validation_katakana">%1$s must be katakana characters</string>
+    <string name="afe__msg_validation_alphabet">%1$s must be alphabet characters</string>
+    <string name="afe__msg_validation_alphanum">%1$s must be alphabet or number characters</string>
+    <string name="afe__validator_required">com.androidformenhancer.validator.RequiredValidator</string>
+    <string name="afe__validator_int_type">com.androidformenhancer.validator.IntTypeValidator</string>
+    <string name="afe__validator_float_type">com.androidformenhancer.validator.FloatTypeValidator</string>
+    <string name="afe__validator_digits">com.androidformenhancer.validator.DigitsValidator</string>
+    <string name="afe__validator_min_value">com.androidformenhancer.validator.MinValueValidator</string>
+    <string name="afe__validator_max_value">com.androidformenhancer.validator.MaxValueValidator</string>
+    <string name="afe__validator_int_range">com.androidformenhancer.validator.IntRangeValidator</string>
+    <string name="afe__validator_multibyte">com.androidformenhancer.validator.MultibyteValidator</string>
+    <string name="afe__validator_singlebyte">com.androidformenhancer.validator.SinglebyteValidator</string>
+    <string name="afe__validator_length">com.androidformenhancer.validator.LengthValidator</string>
+    <string name="afe__validator_max_length">com.androidformenhancer.validator.MaxLengthValidator</string>
+    <string name="afe__validator_num_of_digits">com.androidformenhancer.validator.NumOfDigitsValidator</string>
+    <string name="afe__validator_max_num_of_digits">com.androidformenhancer.validator.MaxNumOfDigitsValidator</string>
+    <string name="afe__validator_regex">com.androidformenhancer.validator.RegexValidator</string>
+    <string name="afe__validator_email">com.androidformenhancer.validator.EmailValidator</string>
+    <string name="afe__validator_date_pattern">com.androidformenhancer.validator.DatePatternValidator</string>
+    <string name="afe__validator_past_date">com.androidformenhancer.validator.PastDateValidator</string>
+    <string name="afe__validator_hiragana">com.androidformenhancer.validator.HiraganaValidator</string>
+    <string name="afe__validator_katakana">com.androidformenhancer.validator.KatakanaValidator</string>
+    <string name="afe__validator_alphabet">com.androidformenhancer.validator.AlphabetValidator</string>
+    <string name="afe__validator_alphanum">com.androidformenhancer.validator.AlphaNumValidator</string>
+
+</resources>

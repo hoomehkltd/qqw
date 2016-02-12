@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\androidformenhancer\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ic_textfield_ok2.png",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\androidformenhancer\\res\\drawable-xxhdpi\\ic_textfield_ok2.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\androidformenhancer\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ic_textfield_error.png",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\androidformenhancer\\res\\drawable-xxhdpi\\ic_textfield_error.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\androidformenhancer\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ic_textfield_ok.png",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\androidformenhancer\\res\\drawable-xxhdpi\\ic_textfield_ok.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\androidformenhancer\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ic_textfield_error2.png",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\mapapplication\\androidformenhancer\\res\\drawable-xxhdpi\\ic_textfield_error2.png"
+    }
+]

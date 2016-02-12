@@ -1,5 +1,9 @@
 package com.example.user.mapapplication;
 
+import android.provider.BaseColumns;
+
+import org.kymjs.kjframe.database.annotate.Table;
+
 import java.util.ArrayList;
 
 /**
@@ -10,13 +14,20 @@ public class User {
     private String password;
     private String name;
     private int phoneNo;
-    private ArrayList<Appointment> buildingVisitLog;
-    private ArrayList<Appointment> buildingAppointment;
-    private ArrayList<BuildingData> buildingShoppingCart;
+    private ArrayList<Appointment> apartmentVisitLog;
+    private ArrayList<Appointment> apartmentAppointment;
+    private ArrayList<String> apartmentShoppingCart;
     private String msg;
     private ArrayList<Agent> agentList;
 
     public User() {
+        initializeUserData();
+    }
+
+    public void initializeUserData(){
+        apartmentAppointment = new ArrayList<Appointment>();
+        apartmentShoppingCart = new ArrayList<String>();
+        setApartmentShoppingCart(apartmentShoppingCart);
     }
 
     public String getPassword() {
@@ -51,28 +62,28 @@ public class User {
         this.phoneNo = phoneNo;
     }
 
-    public ArrayList<Appointment> getBuildingVisitLog() {
-        return buildingVisitLog;
+    public ArrayList<Appointment> getApartmentVisitLog() {
+        return apartmentVisitLog;
     }
 
-    public void setBuildingVisitLog(ArrayList<Appointment> buildingVisitLog) {
-        this.buildingVisitLog = buildingVisitLog;
+    public void setApartmentVisitLog(ArrayList<Appointment> apartmentVisitLog) {
+        this.apartmentVisitLog = apartmentVisitLog;
     }
 
-    public ArrayList<Appointment> getBuildingAppointment() {
-        return buildingAppointment;
+    public ArrayList<Appointment> getApartmentAppointment() {
+        return apartmentAppointment;
     }
 
-    public void setBuildingAppointment(ArrayList<Appointment> buildingAppointment) {
-        this.buildingAppointment = buildingAppointment;
+    public void setApartmentAppointment(ArrayList<Appointment> apartmentAppointment) {
+        this.apartmentAppointment = apartmentAppointment;
     }
 
-    public ArrayList<BuildingData> getBuildingShoppingCart() {
-        return buildingShoppingCart;
+    public ArrayList<String> getApartmentShoppingCart() {
+        return apartmentShoppingCart;
     }
 
-    public void setBuildingShoppingCart(ArrayList<BuildingData> buildingShoppingCart) {
-        this.buildingShoppingCart = buildingShoppingCart;
+    public void setApartmentShoppingCart(ArrayList<String> apartmentShoppingCart) {
+        this.apartmentShoppingCart = apartmentShoppingCart;
     }
 
     public String getMsg() {
@@ -89,5 +100,21 @@ public class User {
 
     public void setAgentList(ArrayList<Agent> agentList) {
         this.agentList = agentList;
+    }
+
+    public static abstract class UserInfo implements BaseColumns {
+        public static final String TableName="table_user";
+        public static final String id = "id";
+        public static final String password = "password";
+        public static final String name = "name";
+        public static final String phoneNo = "phoneNo";
+        public static final String apartmentVisitLog = "apartmentVisitLog";
+        public static final String apartmentAppointment = "apartmentAppointment";
+        public static final String apartmentShoppingCart = "apartmentShoppingCart";
+        public static final String msg = "msg";
+        public static final String agentList = "agentList";
+        public static final String DatabaseName = "database_user";
+
+
     }
 }
